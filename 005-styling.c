@@ -1,4 +1,5 @@
 #include "stack.h"
+#define _POSIX_C_SOURCE 200809L 
 #include <stdio.h>
 #include <string.h>
 
@@ -99,11 +100,10 @@ void (*get_op_func(char *opcode))(stack_t**, unsigned int)
 
 	return (NULL);
 }
-
 /**
- * byte_script - Primary function to execute a Monty bytecodes script
- * @script_fd: File descriptor for an open Monty bytecodes script
- * Return: EXIT_SUCCESS on success, respective error code on failure
+ * byte_script - Primary function to execute a Monty bytecodes script.
+ * @script_fd: File descriptor for an open Monty bytecodes script.
+ * Return: EXIT_SUCCESS on success, respective error code on failure.
  */
 int byte_script(FILE *script_fd)
 {
@@ -127,7 +127,7 @@ int byte_script(FILE *script_fd)
 			free_stack(&stack);
 			return (malloc_fail());
 		}
-		else if (op_toks[0][0] == '#')
+		else if (op_toks[0][0] == '#') /* comment line */
 		{
 			free_tokens();
 			continue;
