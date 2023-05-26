@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * queue_conv - prints the top
+ * queue_conv - displays the top most element on stack
  * @head: pointer to the head of the stack
  * @counter: line_number
  * Return: Always (void)
@@ -14,8 +14,8 @@ void queue_conv(stack_t **head, unsigned int counter)
 }
 
 /**
- * new_queue - add node to the tail stack
- * @n: new_value
+ * new_queue - adds new node to the tail of the stack
+ * @n: the new_value
  * @head: pointer to the head of the stack
  * Return: Always (void)
 */
