@@ -1,4 +1,4 @@
-# The blocks below hold the values to be evaluated
+# The blocks below holds the values to be evaluated
 # BLOCK 0	BLOCK 1		BLOCK 2		BLOCK 3 	BLOCK4
 # 0		4		1		0 		
 >,------------------------------------------------ # READ INTO #1
